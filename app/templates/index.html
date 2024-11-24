@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Analyzer</title>
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+</head>
+<body>
+    <h1>Upload an Image</h1>
+    <form hx-post="/analyze-image" hx-target="#result" hx-swap="innerHTML" enctype="multipart/form-data">
+        <input type="file" name="file" accept="image/*" required>
+        <button type="submit">Analyze Image</button>
+    </form>
+
+    <div id="result">
+        <!-- JSON response will display here -->
+    </div>
+</body>
+</html>

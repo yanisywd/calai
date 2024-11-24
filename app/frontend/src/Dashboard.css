@@ -1,0 +1,80 @@
+/* Dashboard.css */
+.dashboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #007bff;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .meal-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .meal-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease;
+  }
+  
+  .meal-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .meal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .meal-header h3 {
+    color: #007bff;
+    font-size: 18px;
+  }
+  
+  .meal-info {
+    margin-top: 10px;
+  }
+  
+  .aliments-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .aliment-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  
+  .aliment-name {
+    font-weight: bold;
+  }
+  
+  .aliment-category {
+    color: #555;
+  }
+  
+  .aliment-weight,
+  .aliment-calories {
+    font-size: 14px;
+    color: #777;
+  }
+  

@@ -1,0 +1,205 @@
+/* App.css */
+
+/* Global Styles */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(to right, #43cea2, #185a9d);
+  color: #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Upload Container */
+.upload-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.file-input {
+  padding: 10px;
+  font-size: 1em;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.analyze-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  background: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.analyze-button:hover {
+  transform: scale(1.05);
+  background: #388e3c;
+}
+
+/* Result Container */
+.result-container {
+  margin-top: 20px;
+  animation: slideIn 0.8s ease-in-out;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Food Card */
+.food-card {
+  position: relative;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+  animation: popIn 0.5s ease-in-out;
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+}
+
+.stats-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Meal Type Buttons */
+.meal-type-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.meal-type-button {
+  padding: 10px 15px;
+  font-size: 1em;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.meal-type-button:hover {
+  transform: scale(1.1);
+  background: #1976d2;
+}
+
+.meal-type-button.selected {
+  background: #ff9800;
+}
+
+/* Save Button */
+.save-button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  font-size: 1.1em;
+  background: #e91e63;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.save-button:hover {
+  transform: scale(1.05);
+  background: #c2185b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* App.css */
+.navbar {
+  background-color: #333;
+  padding: 10px;
+}
+
+.navbar-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar-list li {
+  margin-right: 20px;
+}
+
+.navbar-list li a,
+.navbar-list li button {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.navbar-list li a:hover,
+.navbar-list li button:hover {
+  background-color: #555;
+}
+
+.app-header {
+  text-align: center;
+  padding: 20px;
+}

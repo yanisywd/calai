@@ -1,0 +1,159 @@
+Aliment,Catégorie,Calories (kcal/100g),Protéines (g/100g),Glucides (g/100g),Lipides (g/100g)
+Pomme,Fruit,52,0.3,14,0.2
+Banane,Fruit,89,1.1,23,0.3
+Orange,Fruit,47,0.9,12,0.1
+Raisin,Fruit,69,0.7,18,0.2
+Fraise,Fruit,32,0.7,8,0.3
+Poire,Fruit,57,0.4,15,0.1
+Ananas,Fruit,50,0.5,13,0.1
+Pastèque,Fruit,30,0.6,8,0.2
+Myrtille,Fruit,57,0.7,14,0.3
+Kiwi,Fruit,61,1.1,15,0.5
+Poulet,Viande,215,25,0,13.5
+Boeuf,Viande,250,26,0,17
+Porc,Viande,242,27,0,14
+Dinde,Viande,189,29,0.9,5
+Agneau,Viande,294,25,0,21
+Canard,Viande,337,19,0,28
+Lapin,Viande,173,33,0,3.5
+Saucisson,Viande,368,19,3.1,32
+Saumon,Poisson,206,20,0,13
+Thon,Poisson,144,23,0,5
+Cabillaud,Poisson,82,18,0,0.7
+Truite,Poisson,168,20,0,9
+Maquereau,Poisson,205,19,0,14
+Sardine,Poisson,208,25,0,11
+Crevette,Poisson,99,24,0.2,1.5
+Homard,Poisson,77,16,1.5,0.6
+Céréale,Céréales,389,14,72,7
+Riz,Céréales,130,2.7,28,0.3
+Avoine,Céréales,389,17,66,7
+Orge,Céréales,354,12,73,2.3
+Quinoa,Céréales,120,4,21,1.9
+Blé,Céréales,339,14,72,2.5
+Sarrasin,Céréales,343,13,71,3.4
+Millet,Céréales,378,11,73,4.2
+Dattes,Fruit,282,2.5,75,0.5
+Abricots secs,Fruit,241,3.4,63,0.5
+Noisettes,Noix,628,15,17,61
+Amandes,Noix,579,21,22,49
+Noix de cajou,Noix,553,18,30,44
+Noix de pécan,Noix,691,9,14,72
+Pistaches,Noix,562,20,28,45
+Beurre,Produit laitier,717,0.9,0,81
+Fromage,Produit laitier,402,25,1.3,33
+Lait,Produit laitier,42,3.4,5,1
+Yaourt,Produit laitier,59,10,3.6,0.4
+Yaourt grec,Produit laitier,118,5.7,3.6,10
+Crème fraîche,Produit laitier,345,2,3,37
+Mozzarella,Produit laitier,280,18,3,21
+Parmesan,Produit laitier,431,38,4.1,29
+Oeuf,Produits animaux,155,13,1.1,11
+Jambon,Produits animaux,145,20,1.5,6
+Saucisse,Produits animaux,301,12,1.9,26
+Salami,Produits animaux,407,23,1.6,34
+Bacon,Produits animaux,541,37,1.4,42
+Tomate,Légume,18,0.9,3.9,0.2
+Carotte,Légume,41,0.9,10,0.2
+Laitue,Légume,15,1.4,2.9,0.2
+Brocoli,Légume,34,2.8,6.6,0.4
+Oignon ,Légume,20,2.2,6.1,0.3
+Concombre,Légume,16,0.7,3.6,0.1
+Pomme de terre,Légume,77,2,17,0.1
+Courgette,Légume,17,1.2,3.1,0.3
+Aubergine,Légume,25,1,6,0.2
+Épinards,Légume,23,2.9,3.6,0.3
+Chou kale,Légume,49,4.3,9,1
+Choux-fleurs,Légume,25,1.9,5,0.3
+Navet,Légume,28,0.9,6.5,0.1
+Poireau,Légume,61,1.5,14,0.3
+Bette,Légume,19,1.8,3.7,0.2
+Chou de Bruxelles,Légume,43,3.4,9,0.3
+Artichaut,Légume,47,3.3,11,0.2
+Pois chiches,Légumineuse,164,9,27,3
+Lentilles,Légumineuse,116,9,20,0.4
+Haricots,Légumineuse,127,8.7,22,0.5
+Soja,Légumineuse,446,36,30,20
+Fèves,Légumineuse,88,8,19,0.7
+Tofu,Légumineuse,76,8,1.9,4.8
+Café,Boisson,0,0.1,0,0.1
+Thé,Boisson,2,0.1,0.5,0
+Jus d'orange,Boisson,45,0.7,10.4,0.2
+Vin rouge,Boisson,85,0.1,2.6,0
+Coca,Boisson,42,0,10.6,0
+Limonade,Boisson,43,0,11,0
+Cappuccino,Boisson,40,1.8,6.1,1.5
+Latte,Boisson,63,3.3,6,3
+Eau,Boisson,0,0,0,0
+Huile d'olive,Assaisonnement,884,0,0,100
+Vinaigre,Assaisonnement,18,0,0.9,0
+Ketchup,Assaisonnement,100,1.3,25.8,0.1
+Moutarde,Assaisonnement,66,3.7,5.9,4.4
+Sel,Assaisonnement,0,0,0,0
+Poivre noir,Assaisonnement,251,10,65,3
+Miel,Sucreries,304,0.3,82,0
+Confiture,Sucreries,250,0.5,65,0.2
+Chocolat noir,Sucreries,546,7.6,61,31
+Gâteau,Pâtisserie,424,3.9,57,20
+Croissant,Pâtisserie,406,6.2,45,21
+Pain au chocolat,Pâtisserie,454,7.3,51,25
+Tarte aux pommes,Pâtisserie,237,2.1,34,11
+Baguette,Pain,289,8,58,1
+Pain complet,Pain,247,11,43,4
+Biscottes,Pain,421,12,72,9.5
+Gratin dauphinois,Plat préparé,150,3.5,13,9
+Quiche lorraine,Plat préparé,296,10,26,18
+Pizza,Plat préparé,266,11,33,10
+Lasagne,Plat préparé,134,6,15,5
+Ratatouille,Plat préparé,79,1.3,9,3.1
+Soupe de légumes,Soupe,29,1.2,5,0.4
+Bouillon de poulet,Soupe,15,3.2,0,0.5
+Soupe de tomates,Soupe,34,0.8,7,0.2
+Soupe miso,Soupe,40,3.2,5,1
+Spaghetti,Pâtes,158,6,30,0.5
+Macaroni,Pâtes,371,13,75,1.5
+Ravioli,Pâtes,246,10,31,9
+Penne,Pâtes,357,12,71,2
+Gnocchi,Pâtes,154,2.9,30,0.1
+Pancake,Pâtisserie,227,5.8,42,5.8
+Crêpe,Pâtisserie,178,5.7,31,4
+Couscous,Céréales,112,3.8,23,0.3
+Salade verte,Légume,17,1.2,2.8,0.3
+Olivier salade,SNACK,181,3,12,14
+Glace à la vanille,Dessert,207,3.5,24,11
+Tiramisu,Dessert,267,4,36,13
+Mousse au chocolat,Dessert,247,6,25,15
+Flan,Dessert,155,5,25,4
+Cupcake,Dessert,305,3.8,50,12
+Riz au lait,Dessert,118,3.4,23,2.4
+Salade de fruits,Dessert,50,0.5,13,0.1
+Pâte à tartiner,Sucreries,539,6,57,31
+Chips,SNACK,536,7,53,34
+Nachos,SNACK,346,7,62,13
+Oignons frits,SNACK,17,1.2,2.8,0.3
+Amandes grillées,Noix,598,21,22,52
+Beurre de cacahuète,Sucreries,588,25,20,50
+Beurre salé,Produit laitier,717,0.9,0,81
+Couscous cuit,Céréales,112,3.8,23,0.3
+Houmous,Légumineuse,177,8,14,9
+Kefir,Produit laitier,40,3.3,4,1.5
+Pomme de terre cuite,Légume,86,2,20,0.1
+frites,Légume,86,2,20,0.1
+Pomme de terre ,Légume,86,2,20,0.1
+Pommes de terre ,Légume,86,2,20,0.1
+Pain pita,Pain,275,9,55,1.2
+Tortilla,Pâtes,237,7,45,4.5
+Omelette,Produits animaux,154,10,1.7,11
+Bacon cuit,Produits animaux,541,37,1.4,42
+Saumon fumé,Poisson,117,20,0,4.3
+Crevette cuite,Poisson,99,24,0.2,1.5
+Spaghetti,Pâtes,158,6,30,0.5
+Pâtes,Pâtes,158,6,30,0.5
+Riz basmati,Céréales,130,2.5,28,0.3
+Pain de mie,Pain,265,8,49,3
+Yaourt nature,Produit laitier,61,3.5,4.7,3
+Oeuf dur,Produits animaux,155,13,1.1,11
+Pizza Margherita,Plat préparé,266,11,33,10
+Poulet rôti,Viande,239,27,0,14
+Purée de pommes de terre,Légume,88,2,15,2
+sauce, SNACK,346,7,62,13
