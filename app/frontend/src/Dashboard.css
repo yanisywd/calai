@@ -1,80 +1,212 @@
-/* Dashboard.css */
+/* Dashboard container */
 .dashboard-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f0f2f5;
-    color: #333;
-    font-family: Arial, sans-serif;
+  max-width: 100%; /* Full width */
+  margin: 0;
+  padding: 20px;
+  background-color: var(--background-grey); /* Soft background */
+  color: var(--text-light); /* Soft white text */
+  font-family: "Roboto", Arial, sans-serif;
+  border-radius: 0; /* Remove rounded corners */
+  box-shadow: none; /* Remove shadow */
+}
+
+/* Header styles */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4CAF50; /* Vibrant green */
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+h1:hover {
+  color: #388E3C; /* Slightly darker green on hover */
+}
+
+h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #b3ffab; /* Softer green */
+  margin-bottom: 25px;
+  transition: color 0.3s ease;
+}
+
+h2:hover {
+  color: #81C784; /* Slightly darker shade for hover */
+}
+
+/* Date section */
+.date-section {
+  margin-bottom: 30px;
+}
+
+.date-section h3 {
+  margin-bottom: 10px;
+  color: #4CAF50; /* Green for the date header */
+  font-size: 1.5rem;
+  border-bottom: 2px solid #4CAF50; /* Green separator line */
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+.date-section h3:hover {
+  color: #388E3C; /* Darker green for hover */
+  border-color: #388E3C; /* Darker border color */
+}
+
+/* Meal table styles */
+.meals-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.meals-table th,
+.meals-table td {
+  border: 1px solid #3e3e4e; /* Dark border for contrast */
+  padding: 10px;
+  text-align: left;
+}
+
+.meals-table th {
+  background-color: #4CAF50; /* Green for header */
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.meals-table th:hover {
+  background-color: #388E3C; /* Darker green for hover */
+}
+
+.meals-table tr:nth-child(even) {
+  background-color: #252533; /* Dark background for even rows */
+}
+
+.meals-table tr:hover {
+  background-color: #333; /* Darker hover background for rows */
+}
+
+.meal-row td {
+  vertical-align: top;
+}
+
+/* Meal information and aliments styling */
+.meal-info {
+  margin-top: 15px;
+  color: #d1d1d1; /* Light text for better readability */
+}
+
+.meal-info p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.meal-info h4 {
+  font-size: 1.2rem;
+  color: #b3ffab; /* Softer green for section titles */
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* Aliments list */
+.aliments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aliment-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #3e3e4e; /* Subtle separator */
+}
+
+.aliment-item:last-child {
+  border-bottom: none; /* Remove last border */
+}
+
+/* Individual aliment details */
+.aliment-name {
+  font-weight: bold;
+  color: #4CAF50; /* Green for emphasis */
+}
+
+.aliment-category {
+  font-size: 0.9rem;
+  color: #bbbbbb; /* Light gray */
+}
+
+.aliment-weight,
+.aliment-calories {
+  font-size: 0.9rem;
+  color: #999999; /* Subtle gray for secondary details */
+}
+
+/* Responsive behavior */
+@media (max-width: 600px) {
+  h1, h2 {
+    font-size: 1.8rem;
   }
-  
-  h1 {
-    text-align: center;
-    color: #007bff;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .meal-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-  }
-  
+
   .meal-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    transition: transform 0.2s ease;
+    padding: 15px;
   }
-  
-  .meal-card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .meal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
+
   .meal-header h3 {
-    color: #007bff;
-    font-size: 18px;
+    font-size: 1.3rem;
   }
-  
-  .meal-info {
-    margin-top: 10px;
+
+  .meal-info h4 {
+    font-size: 1rem;
   }
-  
-  .aliments-list {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .aliment-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 0;
-    border-bottom: 1px solid #e0e0e0;
-  }
-  
-  .aliment-name {
-    font-weight: bold;
-  }
-  
-  .aliment-category {
-    color: #555;
-  }
-  
-  .aliment-weight,
-  .aliment-calories {
-    font-size: 14px;
-    color: #777;
-  }
-  
+}
+
+/* Add a background color for the selected date */
+.date-item.selected {
+  background-color: #388E3C; /* Darker green for selected date */
+  color: var(--background-grey);
+  cursor: pointer;
+}
+
+/* Date item styling */
+.date-item {
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.date-item:hover {
+  background-color: #81C784; /* Softer green for hover */
+  transform: scale(1.02); /* Slight scale effect on hover for better feedback */
+}
+
+/* Arrow icon for expanding/collapsing */
+.arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  color: #4CAF50; /* Green color for the arrow */
+}
+
+.arrow.expanded {
+  transform: rotate(180deg); /* Rotate the arrow when expanded */
+  color: #388E3C; /* Darker green when expanded */
+}
+
+/* Styling for date headers */
+.date-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.date-header:hover {
+  background-color: #81C784; /* Softer green for hover */
+  transform: scale(1.02); /* Slight scale effect on hover for better feedback */
+}

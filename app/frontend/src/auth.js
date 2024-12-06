@@ -6,14 +6,13 @@ const Auth = ({ onLogin }) => {
   const [password, setPassword] = useState("");
   const [isRegistering, setIsRegistering] = useState(false);
 
-
   const navigate = useNavigate(); // Use useNavigate hook
 
   const handleAuthChange = () => {
     setIsRegistering(!isRegistering);
     if (!isRegistering) {
       // Immediately navigate to FirstPage when user clicks on Register
-      navigate("/"); 
+      navigate("/");
     }
   };
 
@@ -50,10 +49,10 @@ const Auth = ({ onLogin }) => {
         // Store the token and username in localStorage after a successful login
         localStorage.setItem("token", data.access_token);
         localStorage.setItem("username", username);
-        
+
         // Call onLogin to notify the parent component that the user is logged in
         onLogin(username);
-        
+
         alert("Login successful!");
       } else {
         alert("Login failed: " + data.error);
@@ -62,7 +61,7 @@ const Auth = ({ onLogin }) => {
       alert("An error occurred: " + error.message);
     }
   };
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isRegistering) {
@@ -74,14 +73,15 @@ const Auth = ({ onLogin }) => {
 
   return (
     <div className="auth-container">
-      <h2>{isRegistering ? "Register" : "Login"}</h2>
-      <form onSubmit={handleSubmit}>
+      <h2 className="auth-title">{isRegistering ? "Register" : "Login"}</h2>
+      <form onSubmit={handleSubmit} className="auth-form">
         <input
           type="text"
           placeholder="Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
+          className="auth-input"
         />
         <input
           type="password"
@@ -89,21 +89,19 @@ const Auth = ({ onLogin }) => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          className="auth-input"
         />
-        <button type="submit">{isRegistering ? "Register" : "Login"}</button>
+        <button type="submit" className="auth-submit-button">
+          {isRegistering ? "Register" : "Login"}
+        </button>
       </form>
-      <button onClick={handleAuthChange}>
-        {isRegistering ? "Already have an account? Log in" : "No account? Register"}
+      <button onClick={handleAuthChange} className="auth-toggle-button">
+        {isRegistering
+          ? "Already have an account? Log in"
+          : "No account? Register"}
       </button>
     </div>
   );
 };
 
 export default Auth;
-
-
-
-
-// reglemente bloquer
-
-// 6kva 

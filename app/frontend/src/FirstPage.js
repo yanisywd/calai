@@ -6,9 +6,12 @@ const FirstPage = ({ onLogin }) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [age, setAge] = useState("");
+  const [taille, setTaille] = useState("");
+  const [poids, setPoids] = useState("");
+  const [sex, setSex] = useState("");
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  
+
   const navigate = useNavigate(); // Initialize the navigate hook
 
   // Define the questions
@@ -16,7 +19,29 @@ const FirstPage = ({ onLogin }) => {
     { label: "Username", value: username, setter: setUsername },
     { label: "Password", value: password, setter: setPassword },
     { label: "Age", value: age, setter: setAge },
+    { 
+      label: "Taille (in cm)", 
+      value: taille, 
+      setter: setTaille, 
+      inputType: "number", 
+      placeholder: "Enter your height in cm",
+    },
+    { 
+      label: "Poids (in kg)", 
+      value: poids, 
+      setter: setPoids, 
+      inputType: "number", 
+      placeholder: "Enter your weight in kg",
+    },
+    { 
+      label: "Sex", 
+      value: sex, 
+      setter: setSex, 
+      inputType: "select", 
+      options: ["homme", "femme"], 
+    },
   ];
+
 
   // Register user
   const registerUser = async () => {
@@ -81,7 +106,7 @@ const FirstPage = ({ onLogin }) => {
           "Content-Type": "application/json",
           "Authorization": `Bearer ${token}`,
         },
-        body: JSON.stringify({ age }),
+        body: JSON.stringify({ age, taille, poids, sex }),
       });
 
       const data = await response.json();
@@ -99,16 +124,31 @@ const FirstPage = ({ onLogin }) => {
     }
   };
 
+
+
+
+
+
+  
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!username || !password || !age) {
+    if (!username || !password || !age || !taille || !poids || !sex) {
       alert("Please fill out all fields.");
       return;
     }
+
+    if (taille <= 0) {
+      alert("Please enter a valid height in cm.");
+      return;
+    }
+
     setIsSubmitting(true);
     await registerUser();
   };
+
+
 
   // Handle next question
   const handleNext = () => {
@@ -146,15 +186,30 @@ const FirstPage = ({ onLogin }) => {
       <form onSubmit={handleSubmit}>
         <div className="question-container">
           <label>{questions[currentQuestionIndex].label}</label>
-          <input
-            type={currentQuestionIndex === 1 ? "password" : "text"}
-            value={questions[currentQuestionIndex].value}
-            onChange={(e) =>
-              questions[currentQuestionIndex].setter(e.target.value)
-            }
-            required
-            autoFocus
-          />
+          {questions[currentQuestionIndex].inputType === "select" ? (
+            <select
+              value={questions[currentQuestionIndex].value}
+              onChange={(e) => questions[currentQuestionIndex].setter(e.target.value)}
+              required
+              autoFocus
+            >
+              <option value="">--Select--</option>
+              {questions[currentQuestionIndex].options.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
+            </select>
+          ) : (
+            <input
+              type={questions[currentQuestionIndex].inputType || "text"}
+              value={questions[currentQuestionIndex].value}
+              onChange={(e) => questions[currentQuestionIndex].setter(e.target.value)}
+              placeholder={questions[currentQuestionIndex].placeholder || ""}
+              required
+              autoFocus
+            />
+          )}
         </div>
 
         <div className="navigation-buttons">
@@ -175,7 +230,7 @@ const FirstPage = ({ onLogin }) => {
 
       <div className="login-button-container">
         {/* Button to login directly and redirect to /app */}
-        <button onClick={handleLoginRedirect}>
+        <button onClick={() => navigate("/app")}>
           Already have an account? Login
         </button>
       </div>

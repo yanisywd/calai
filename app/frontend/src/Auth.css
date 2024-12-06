@@ -1,0 +1,82 @@
+/* Auth Container */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: var(--background-grey); /* Dark grey */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+  
+  /* Title */
+  .auth-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary-green); /* Fluorescent green */
+    margin-bottom: 20px;
+  }
+  
+  /* Form */
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Inputs */
+  .auth-input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid var(--primary-green); /* Green border */
+    border-radius: 10px;
+    background-color: #fff; /* White input field */
+    color: #333;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .auth-input:focus {
+    outline: none;
+    border-color: #39ff91; /* Brighter green on focus */
+    box-shadow: 0 0 8px var(--primary-green);
+  }
+  
+  /* Submit Button */
+  .auth-submit-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--background-grey); /* Dark grey text */
+    background-color: var(--primary-green); /* Fluorescent green */
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .auth-submit-button:hover {
+    background-color: #39ff91; /* Brighter green on hover */
+    box-shadow: 0px 0px 10px var(--primary-green);
+  }
+  
+  .auth-submit-button:active {
+    transform: scale(0.95);
+  }
+  
+  /* Toggle Button */
+  .auth-toggle-button {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--primary-green);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .auth-toggle-button:hover {
+    color: #39ff91; /* Brighter green */
+    text-decoration: underline;
+  }
+  

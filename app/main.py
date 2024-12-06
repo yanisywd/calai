@@ -153,9 +153,35 @@ async def login(user: dict):
 
 userinfo_collection = db["UserInfo"]
 
+# @app.post("/save_user_info")
+# async def save_user_info(data: dict, username: str = Depends(get_current_user)):
+#     age = data.get("age")
+#     if not age:
+#         return JSONResponse(content={"error": "Age is required"}, status_code=400)
+
+#     # Check if user info already exists
+#     existing_info = userinfo_collection.find_one({"username": username})
+#     if existing_info:
+#         return JSONResponse(content={"error": "User info already exists"}, status_code=400)
+
+#     user_info_data = {
+#         "username": username,
+#         "age": age,
+#     }
+
+#     userinfo_collection.insert_one(user_info_data)
+#     return JSONResponse(content={"message": "User information saved successfully"}, status_code=201)
+
+
+
+
+
 @app.post("/save_user_info")
 async def save_user_info(data: dict, username: str = Depends(get_current_user)):
     age = data.get("age")
+    taille = data.get("taille")
+    poids = data.get("poids")
+    sex = data.get("sex")
     if not age:
         return JSONResponse(content={"error": "Age is required"}, status_code=400)
 
@@ -167,10 +193,18 @@ async def save_user_info(data: dict, username: str = Depends(get_current_user)):
     user_info_data = {
         "username": username,
         "age": age,
+        "taille": taille,
+        "poids": poids,
+        "sex": sex,
     }
 
     userinfo_collection.insert_one(user_info_data)
     return JSONResponse(content={"message": "User information saved successfully"}, status_code=201)
+
+
+
+
+
 
 
 

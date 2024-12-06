@@ -1,205 +1,318 @@
 /* App.css */
+:root {
+  --primary-green: #32ff7e; /* Fluorescent green */
+  --background-grey: #1e1e1e; /* Dark grey */
+  --text-light: #ffffff; /* White for text */
+  --button-hover: #2ac056; /* Slightly darker green for hover */
+}
 
-/* Global Styles */
 body {
-  font-family: "Arial", sans-serif;
-  background: linear-gradient(to right, #43cea2, #185a9d);
-  color: #fff;
-  padding: 20px;
-  margin: 0;
-}
-
-/* Title */
-.title {
-  text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 20px;
-  animation: fadeIn 1s ease-in-out;
-}
-
-/* Upload Container */
-.upload-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.file-input {
-  padding: 10px;
-  font-size: 1em;
-  border: none;
-  border-radius: 10px;
-  background-color: #ffffff;
-  color: #333;
-}
-
-.analyze-button {
-  padding: 10px 20px;
-  font-size: 1em;
-  background: #4caf50;
-  color: #fff;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.analyze-button:hover {
-  transform: scale(1.05);
-  background: #388e3c;
-}
-
-/* Result Container */
-.result-container {
-  margin-top: 20px;
-  animation: slideIn 0.8s ease-in-out;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-/* Food Card */
-.food-card {
-  position: relative;
-  padding: 15px;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
-  animation: popIn 0.5s ease-in-out;
-}
-
-.food-card:hover {
-  transform: translateY(-10px);
-}
-
-.stats-list {
-  list-style-type: none;
-  padding: 0;
-}
-
-/* Meal Type Buttons */
-.meal-type-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.meal-type-button {
-  padding: 10px 15px;
-  font-size: 1em;
-  background: #2196f3;
-  color: #fff;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.meal-type-button:hover {
-  transform: scale(1.1);
-  background: #1976d2;
-}
-
-.meal-type-button.selected {
-  background: #ff9800;
-}
-
-/* Save Button */
-.save-button {
-  margin-top: 20px;
-  padding: 10px 25px;
-  font-size: 1.1em;
-  background: #e91e63;
-  color: #fff;
-  border: none;
-  border-radius: 15px;
-  cursor: pointer;
-  transition: transform 0.3s, background 0.3s;
-}
-
-.save-button:hover {
-  transform: scale(1.05);
-  background: #c2185b;
-}
-
-/* Animations */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes popIn {
-  0% {
-    transform: scale(0.8);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-
-/* App.css */
-.navbar {
-  background-color: #333;
-  padding: 10px;
-}
-
-.navbar-list {
-  list-style-type: none;
+  background-color: var(--background-grey);
+  color: var(--text-light);
+  font-family: "Roboto", sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
 }
 
-.navbar-list li {
-  margin-right: 20px;
-}
-
-.navbar-list li a,
-.navbar-list li button {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  padding: 8px 16px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-.navbar-list li a:hover,
-.navbar-list li button:hover {
-  background-color: #555;
+.app-container {
+  padding: 2rem;
 }
 
 .app-header {
   text-align: center;
-  padding: 20px;
+  margin-bottom: 2rem;
+}
+
+.app-header h1 {
+  color: var(--primary-green);
+  font-size: 2.5rem;
+  text-shadow: 0px 0px 15px var(--primary-green);
+}
+
+.user-info {
+  margin-top: 1rem;
+}
+
+.user-info button {
+  background-color: var(--primary-green);
+  color: var(--background-grey);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+.user-info button:hover {
+  background-color: var(--button-hover);
+}
+
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.file-input {
+  border: 2px dashed var(--primary-green);
+  padding: 1rem;
+  background: transparent;
+  color: var(--text-light);
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.file-input:hover {
+  border-color: var(--button-hover);
+}
+
+button {
+  background-color: var(--primary-green);
+  color: var(--background-grey);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+
+button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: var(--button-hover);
+}
+
+.result-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  background: #2a2a2a;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.result-left img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px var(--primary-green);
+}
+
+.result-right {
+  width: 60%;
+}
+
+.result-right h2 {
+  color: var(--primary-green);
+  font-size: 1.8rem;
+  text-shadow: 0px 0px 10px var(--primary-green);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.food-card {
+  background: #1e1e1e;
+  border: 1px solid var(--primary-green);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(50, 255, 126, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px rgba(50, 255, 126, 0.5);
+}
+
+.food-card h3 {
+  color: var(--primary-green);
+}
+
+.food-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.food-card li {
+  margin: 0.5rem 0;
+}
+
+.meal-type-container {
+  margin-top: 1.5rem;
+}
+
+.meal-type-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.meal-type-button {
+  background: transparent;
+  border: 2px solid var(--primary-green);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: all 0.3s ease-in-out;
+}
+
+.meal-type-button.selected {
+  background-color: var(--primary-green);
+  color: var(--background-grey);
+}
+
+.meal-type-button:hover {
+  background-color: var(--button-hover);
+}
+
+.save-button {
+  margin-top: 1rem;
+  display: block;
+  background: var(--primary-green);
+  color: var(--background-grey);
+  padding: 0.75rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.save-button:disabled {
+  background-color: grey;
+}
+/* App.css */
+
+/* UserInfo Container */
+.user-info-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--background-grey); /* Dark grey background */
+  padding: 10px 20px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Welcome Text */
+.user-welcome {
+  font-size: 1rem;
+  color: var(--text-light); /* Light text color */
+  font-weight: bold;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: var(--primary-green); /* Fluorescent green button */
+  color: var(--background-grey); /* Dark grey text for contrast */
+  border: none;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.logout-button:hover {
+  background-color: rgba(50, 255, 126, 0.8); /* Slightly brighter green */
+  box-shadow: 0px 0px 10px var(--primary-green);
+}
+
+.logout-button:active {
+  transform: scale(0.95);
+}
+/* Overall container styling */
+.auth-container {
+  max-width: 400px;
+  margin: 100px auto; /* Centered on the page */
+  background-color: #1f1f1f; /* Dark grey background */
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 4px 20px rgba(0, 255, 100, 0.3); /* Neon green glow */
+}
+
+/* Title */
+.auth-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00ff91; /* Neon green */
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Input fields */
+.auth-input {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: 2px solid #00ff91; /* Neon green border */
+  border-radius: 10px;
+  background-color: #333; /* Darker input background */
+  color: #fff; /* White text */
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-input:focus {
+  outline: none;
+  border-color: #39ff91; /* Brighter neon on focus */
+  box-shadow: 0 0 8px #00ff91;
+}
+
+/* Submit button */
+.auth-submit-button {
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #00ff91; /* Neon green */
+  color: #1f1f1f; /* Dark grey text */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-submit-button:hover {
+  background-color: #39ff91; /* Brighter green */
+  box-shadow: 0px 0px 10px #00ff91;
+}
+
+.auth-submit-button:active {
+  transform: scale(0.95);
+}
+
+/* Toggle button */
+.auth-toggle-button {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #00ff91; /* Neon green */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth-toggle-button:hover {
+  color: #39ff91; /* Brighter green */
+  text-decoration: underline;
 }

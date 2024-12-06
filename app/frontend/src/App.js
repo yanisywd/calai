@@ -206,10 +206,11 @@
 
 
 import React, { useState, useEffect } from "react";
-
+import { useNavigate } from "react-router-dom";
+import AnimatedNavbar from './AnimatedNavbar'; // Import the new navbar
+import UserInfo from "./UserInfo";
 import "./App.css";
 import Auth from "./auth";
-import { useNavigate } from "react-router-dom";
 
 const App = () => {
   const navigate = useNavigate();
@@ -328,18 +329,16 @@ const App = () => {
         <Auth onLogin={setUser} />
       ) : (
         <>
-          <nav>
-            <button onClick={() => setMealType("")}>Home</button>
-            <button onClick={() => navigate("/dashboard")}>Dashboard</button>;
-            <button onClick={logoutUser}>Logout</button>
-          </nav>
-
+  <AnimatedNavbar 
+            onHomeClick={() => setMealType("")}
+            onDashboardClick={() => navigate("/dashboard")}
+            onLogoutClick={logoutUser}
+            username={user}
+          />
+<UserInfo user={user} onLogout={logoutUser} />
           <header className="app-header">
             <h1>🍽️ Food Image Analyzer</h1>
-            <div className="user-info">
-              <span>Welcome, {user}</span>
-              <button onClick={logoutUser}>Logout</button>
-            </div>
+
           </header>
 
           <div className="upload-container">
